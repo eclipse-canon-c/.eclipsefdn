@@ -23,7 +23,7 @@ orgs.newOrg('iot.threadx.canon-c', 'eclipse-canon-c') {
       default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_alerts_enabled: false,
-      description: "A semantic standard library for verified C — explicit, composable modules that add meaning without hiding behavior.",
+      description: "A semantic standard library for verified C — with explicit, composable verified primitives that can scale.",
       has_discussions: true,
       homepage: "",
       secret_scanning: "disabled",
@@ -74,6 +74,21 @@ orgs.newOrg('iot.threadx.canon-c', 'eclipse-canon-c') {
     orgs.newRepo('project-website') {
       allow_merge_commit: true,
       allow_update_branch: false,
+      delete_branch_on_merge: false,
+      description: "Canon-C project website",
+      secret_scanning: "disabled",
+      secret_scanning_push_protection: "disabled",
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
+    orgs.newRepo('external-classifications') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      custom_properties: {
+        eclipse_project: "iot.threadx.canon-c"
+      },
       delete_branch_on_merge: false,
       description: "Canon-C project website",
       secret_scanning: "disabled",

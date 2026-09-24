@@ -83,6 +83,18 @@ orgs.newOrg('iot.threadx.canon-c', 'eclipse-canon-c') {
         default_workflow_permissions: "write",
       },
     },
+    orgs.newRepo('academic-related') {
+      allow_auto_merge: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      dependabot_alerts_enabled: false,
+      secret_scanning: "disabled",
+      secret_scanning_push_protection: "disabled",
+      web_commit_signoff_required: false,
+      workflows+: {
+        enabled: false,
+      },
+    },
   ],
 } + {
   # snippet added due to 'https://github.com/EclipseFdn/otterdog-configs/blob/main/blueprints/add-dot-github-repo.yml'

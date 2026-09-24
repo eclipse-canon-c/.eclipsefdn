@@ -90,7 +90,6 @@ orgs.newOrg('iot.threadx.canon-c', 'eclipse-canon-c') {
         eclipse_project: "iot.threadx.canon-c"
       },
       delete_branch_on_merge: false,
-      description: "Canon-C project website",
       secret_scanning: "disabled",
       secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
